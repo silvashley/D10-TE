@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Text Editor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function clearscrn() {
+                    document.getElementById('screen').value = "" ;
+                }
+        </script>
+    </head>
+    <body>
+        <main>
+            <h1>Text Editor</h1>
+            <div>
+                <button onclick="document.getElementById('input').style.fontWeight = 'bold'">Bold</button>
+                <button onclick="document.getElementById('input').style.fontStyle = 'italic'">Italics</button>
+                <button onclick="document.getElementById('input').style.color='red'">Red</button>
+                <button onclick="document.getElementById('input').style.textAlign ='left'">LA</button>
+                <button onclick="document.getElementById('input').style.textAlign ='center'">CA</button>
+                <button onclick="document.getElementById('input').style.textAlign='right'">RA</button>
+                <button onclick="document.getElementById('input').style.textTransform='uppercase'">Uppercase</button>
+                <button onclick="document.getElementById('input').style.textTransform='lowercase'">LC</button>
+                <button onclick="document.getElementById('input').style.textTransform='capitalize'">Cap</button>
+                <button onclick="document.getElementById('input').value=''">Clear</button>
+            </div>
+            <textarea id="input"></textarea>
+        </main>
+    </body>
+</html>
