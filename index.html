@@ -8,29 +8,47 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             function clearscrn() {
-                    document.getElementById('screen').value = "" ;
+                  document.getElementById('input').value = "" ;
+                  document.getElementById('input').style.textAlign ="left";
+                  document.getElementById('input').style.color='black';
+                  document.getElementById('input').style.fontStyle = 'normal';
+                  document.getElementById('input').style.fontWeight = 'normal';
+                  document.getElementById('input').style.textTransform='lowercase';
+                  
+
                 }
         </script>
     </head>
     <body>
-        <main class="h-screen w-11/12 mx-auto bg-red-500">
+        <main class="h-screen w-11/12 mx-auto shadow-lg">
+           <div class=" divide-y-4 divide-solid">
             <h1 class="text-7xl text-purple-400 text-center p-8">Text Editor</h1>
-            <div class=" flex justify-evenly h-fit w-11/12 mx-auto p-8 bg-green-500">
+            <div class=" flex justify-evenly h-fit w-11/12 mx-auto p-8">
                 <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.fontWeight = 'bold'">Bold</button>
                 <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.fontStyle = 'italic'">Italics</button>
                 <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.color='red'">Red</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textAlign ='left'">LA</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textAlign ='center'">CA</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textAlign='right'">RA</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='uppercase'">Uppercase</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='lowercase'">LC</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='capitalize'">Cap</button>
-                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').value=''">Clear</button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md w-16 h-14 text-3xl p-2" onclick="document.getElementById('input').style.textAlign ='left'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-fit h-fit">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+                    </svg>
+                </button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-14 w-16 text-3xl p-2" onclick="document.getElementById('input').style.textAlign ='center'">
+                    <img class="h-fit w-fit"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAS1BMVEX///8AAAD19fUXFxe1tbXg4OChoaFDQ0NqamqFhYVRUVEKCgpwcHCSkpJGRkbd3d1YWFjCwsKZmZkrKyv5+flkZGRra2urq6u8vLwhRGNcAAAA2ElEQVR4nO3bSQ6CQBBAUSdERcVZ739StyaoLGi7AN87Qf1NdVJJTyYAAAAAAAAAAAAAAAAADMihmmcxLaIKN9NMFCpUqHDEhftchXVU4XGRySyqEAAAAACAN07LtKJ7mlJf8qN7mhIHVtE9TQoVKoyXuLCHu/RcJrWP7gEAAAAA4MUsl7DCMvUl/5Owf0/j/7umUKFChb83/teiyKS+RBUCAAAAAPDF6brq4LqInr/drdsBfxc9f7utQoW9p3D4hePfpfd1J4/o+QEAAAAAAAAAAAAAgH/3BFtyGpyNi9eEAAAAAElFTkSuQmCC" alt="center">
+                </img>
+                </button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-14 w-16 text-3xl p-2" onclick="document.getElementById('input').style.textAlign='right'">
+                    <img class="h-8 w-8 justify-self-stretch"src="https://cdn-icons-png.flaticon.com/512/1994/1994234.png" alt="right">
+                </img>
+                </button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='uppercase'">Upper Case</button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='lowercase'">Lower Case</button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="document.getElementById('input').style.textTransform='capitalize'">Capitalize</button>
+                <button class="border-solid border-2 border-purple-400 shadow-md text-stone-500 rounded-md h-fit w-fit text-3xl p-2" onclick="clearscrn()">Clear Text</button>
             </div>
+           </div>
             <br>
             <div class="h-4/5 w-10/12 mx-auto bg-blue-500">
-                <textarea class= "border-solid border-4 border-purple-400 shadow-md text-stone-500 rounded-md w-full h-full  mx-auto p-8 text-2xl" id="input">Your Text Here</textarea>
-
+                <textarea class= "border-solid border-4 border-purple-400 shadow-md text-stone-500 rounded-md w-full h-full mx-auto p-8 text-2xl" id="input">Your Text Here</textarea>
             </div>
         </main>
     </body>
